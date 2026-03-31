@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Fullstack Demo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>团队任务看板 Demo</h1>
+      <p>前端：JavaScript / 后端：Java（内存数据，适合 PRD 生成测试）</p>
+
+      <section class="card">
+        <h2>健康检查</h2>
+        <button id="healthBtn">请求 /api/health</button>
+        <pre id="healthResult">等待请求...</pre>
+      </section>
+
+      <section class="card">
+        <h2>看板统计</h2>
+        <button id="dashboardBtn">刷新 /api/dashboard</button>
+        <pre id="dashboardResult">等待请求...</pre>
+      </section>
+
+      <section class="card">
+        <h2>用户管理</h2>
+        <input id="userNameInput" type="text" placeholder="用户名，如 Charlie" />
+        <input id="userRoleInput" type="text" placeholder="角色，如 Designer" />
+        <button id="addUserBtn">新增用户</button>
+        <button id="listUsersBtn">刷新用户列表</button>
+        <pre id="usersResult">等待请求...</pre>
+      </section>
+
+      <section class="card">
+        <h2>任务管理</h2>
+        <input id="taskTitleInput" type="text" placeholder="任务标题，如 Review PRD Draft" />
+        <input id="taskOwnerIdInput" type="number" placeholder="负责人 ID，如 1" />
+        <button id="addTaskBtn">新增任务</button>
+        <button id="listTasksBtn">刷新任务列表</button>
+
+        <hr />
+        <input id="taskIdInput" type="number" placeholder="任务 ID，如 2" />
+        <input id="taskStatusInput" type="text" placeholder="状态: todo/doing/done" />
+        <button id="updateTaskStatusBtn">更新任务状态</button>
+
+        <pre id="tasksResult">等待请求...</pre>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
